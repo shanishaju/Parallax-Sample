@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  // Commented-out code can remain unchanged in SCSS
+  /*
+  .image-container {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    overflow: hidden; 
+  }
+  */
+  
+  body {
+    background-color: #0a2a43;
+    min-height: 1500px;
+  }
+  
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 100px;
+      width: 100%;
+      background: linear-gradient(to top, #0a2a43, transparent);
+      z-index: 10000;
+    }
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #0a2a43;
+      z-index: 10000;
+      mix-blend-mode: color;
+    }
+  
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+  
+  #text {
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+  }
+  
+  #road {
+    z-index: 2;
+  }
+  
